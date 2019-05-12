@@ -1,11 +1,12 @@
 import random
 
 def main():
-    playerChoice=playerChoose()
+    print('Welcome To Rock Paper Scissors!\n')
+    playerChoice=playerChoose().capitalize()
     aiChoice=aiChoose()
     outcome=checkWinner(playerChoice,aiChoice)
 
-    print(outcome)
+    print('You ' +outcome)
 
 def playerChoose():
     return input('Choose Your Weapon: ')
