@@ -7,6 +7,8 @@ def main():
     while True:
         print('')
         playerChoice=playerChoose().capitalize()
+        displayPlayerChoice(playerChoice)
+        pause.seconds(1)
         aiChoice=aiChoose()
         outcome=checkWinner(playerChoice,aiChoice)
     
@@ -58,6 +60,53 @@ def welcomeMessage():
                                    |_|                                                     """)
 
     print('By Isaac Oldwood')
+
+def displayPlayerChoice(playerChoice):
+    print('')
+    if playerChoice=='Rock':
+        rockImage()
+    elif playerChoice=='Paper':
+        paperImage()
+    elif playerChoice=='Scissors':
+        scissorsImage()
+
+def rockImage():
+    print("""          `....`              
+  ```````..--:/:.`            
+ .---.------:/+//:.           
+ -//:::++++oso+++//-          \n`-///:/+oydddhs++///-         \n`:------:/+osho+/////-        \n.-:://+///++ohs+///+++-``     \n.-.-:///++osyso++/++++/:--.`  \n.::://///++yyo+++++++++//::--.\n`:/++o++++/+s+++++++++++///:::\n `-///////+o+/////+++++++/////\n   `--::::///////+++++++//////\n             `.:/++++/////////
+                 .-///////////""")
+
+def paperImage():
+    print("""                  .``:-.      
+                `:/-++:--`    
+             --:+//+o/://-`   
+           `:/:o/:+o/::+:-`   
+          .//:++/+o++oo:-.    
+         -//:++//o/:+s/:-`    
+       .://::/::+/+so/:-.     
+      .//::--::-::/+o/:-`     
+     `::::::://:///:---`   `  
+     :::-----:::://:::. .:::-.
+    `::-------:::--.-/-/+/:-` 
+    -::----::::::-../:-:::-`  
+   -//::::::::::--------.`    
+ `/////////::::-----:-`       \n.//////////////::-.`          \n///////++++++:-.`             """)
+
+def scissorsImage():
+    print("""
+                -:.`           
+              ./:-`           
+              `::-.            
+             .::-`         `` 
+             :/:.`      `.::-`
+     ```.```./:--`   `.-::--. 
+   .-----.-////:-``.-::---.   
+  -::-..-:://////::::::.`     
+ -///:-.-ssso//:///::-`       \n./o+::-..osso+/::::-`         
+ `:/:/:-.-:::/:::-`           
+  :::/:-...-::--.`            
+  ::://:--..---`              """)
 
 if __name__=="__main__":
     main()
