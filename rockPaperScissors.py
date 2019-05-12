@@ -6,7 +6,7 @@ def main():
     aiChoice=aiChoose()
     outcome=checkWinner(playerChoice,aiChoice)
 
-    print('You ' +outcome)
+    print(outcomeMessage(outcome))
 
 def playerChoose():
     return input('Choose Your Weapon: ')
@@ -37,6 +37,11 @@ def checkWinner(playerChoice,aiChoice):
         elif aiChoice == 'Scissors':
             return 'Draw'
 
+def outcomeMessage(outcome):
+    if outcome!= 'Draw':
+        return 'You '+ outcome
+    else:
+        return "It's A Draw"
 
 if __name__=="__main__":
     main()
