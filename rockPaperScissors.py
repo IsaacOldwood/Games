@@ -1,12 +1,18 @@
 import random
+import pause
 
 def main():
-    print('Welcome To Rock Paper Scissors!\n')
-    playerChoice=playerChoose().capitalize()
-    aiChoice=aiChoose()
-    outcome=checkWinner(playerChoice,aiChoice)
+    print('Welcome To Rock Paper Scissors!')
 
-    print(outcomeMessage(outcome))
+    while True:
+        print('')
+        playerChoice=playerChoose().capitalize()
+        aiChoice=aiChoose()
+        outcome=checkWinner(playerChoice,aiChoice)
+    
+        print(outcomeMessage(outcome))
+        pause.seconds(1)
+        input('Play Again?')
 
 def playerChoose():
     return input('Choose Your Weapon: ')
