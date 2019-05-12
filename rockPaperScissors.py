@@ -1,7 +1,11 @@
 import random
 
 def main():
-    print(aiChoose())
+    playerChoice=playerChoose()
+    aiChoice=aiChoose()
+    outcome=checkWinner(playerChoice,aiChoice)
+
+    print(outcome)
 
 def playerChoose():
     return input('Choose Your Weapon: ')
