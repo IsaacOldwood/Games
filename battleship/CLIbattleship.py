@@ -64,6 +64,9 @@ def playerSetup(playerGridDict):
     print("\nEnter Co-ordinates in the style: 'B5,C5,D5,E5,F5'\n")
 
     rawPlayerCarrierCoords=input('Aircraft Carrier Co-ordinates: ')
+    splitPlayerCarrierCoords=rawPlayerCarrierCoords.split(',')
+    for coord in splitPlayerCarrierCoords:
+        playerGridDict[coord]='A'
 
 
 def grid(gridDict):
